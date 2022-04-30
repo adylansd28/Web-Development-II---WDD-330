@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week02</h2>
+
+    <p>Notes and excersices for </p>
+
+    <ul>
+        <li><a href="programing-basics.html">Ch2: Programming Basics</a></li>
+        <li><a href="array-logic-loops.html">Ch3: Arrays Logic and Loops</a></li>
+        <li><a href="functions.html">Ch4: Functions</a></li>
+    </ul>
+
+    <p>Notes and excersices for Chapter 4 - Functions</p>
+
+    <p>
+        Declaration
+    </p>
+
+    <ul>
+        <li>A function is a chunk of code that can be referenced by a name, and is almost like
+            a small, self-contained mini program. Functions can help reduce repetition and
+            make code easier to follow
+        </li>
+
+        <ul>
+
+            <p>Function Expression</p>
+
+            <li>Another way of defining a function literal is to create a function expression. This
+                assigns an anonymous function to a variable
+                </li>
+
+            <li>The function in this example is known as an anonymous function because it
+                doesn't have a name; it is simply created, then assigned to the variable goodbye</li>
+
+        </ul>
+
+        <ul>
+
+            <p>Function() Constructors</p>
+
+            <li>A function can also be declared using the constructor Function(). The body of
+                the function is entered as a string, as shown in this example
+                
+                </li>
+
+            <li>A function can also be declared using the constructor Function(). The body of
+                the function is entered as a string, as shown in this example
+                </li>
+
+        </ul>
+
+        <ul>
+
+            <p>Arrow Functions</p>
+
+            <li>These make declaring functions much more succinct by using less verbose
+                syntax
+                
+                </li>
+
+            <li>r. Arrow functions are always anonymous, so if you want to refer to
+                them, you must assign them to a variable.
+                </li>
+
+            <li>They are much less verbose than normal function declarations</li>
+            <li>If the function doesn't require any parameters, a pair of empty parentheses must
+                go before the arrow:
+                </li>
+
+        </ul>
+    </ul>
+
+    <p>
+        Callbacks
+    </p>
+
+    <ul>
+        <li>A
+            function that is passed as an argument to another is known as a callback</li>
+    </ul>
+    
+    <script>
+
+        /* Declare Function*/
+
+        function sum(a, b){
+            let result = a + b
+            return result
+        }
+
+        /* Declare a function expression */
+        const hello = function(){
+        console.log('Hello World!');
+        };
+
+        /* Arrow Function*/
+
+        let variable1 = x => 2 * x;  
+
+
+        /* Callbacks */
+
+        function sing(song,callback) {
+        console.log(`I'm singing along to ${song}.`);
+        callback();
+        }
+
+    </script>
+
+</body>
+</html>

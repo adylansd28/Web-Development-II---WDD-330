@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week02</h2>
+
+    <ul>
+        <li><a href="programing-basics.html">Ch2: Programming Basics</a></li>
+        <li><a href="array-logic-loops.html">Ch3: Arrays Logic and Loops</a></li>
+        <li><a href="functions.html">Ch4: Functions</a></li>
+    </ul>
+
+    <p>Notes and excersices for Chapter 2 - Programming Basics:</p>
+
+    <p>
+        Variables
+    </p>
+
+    <ul>
+        <li>Varibles need to be declared before they can be used</li>
+        <li>Assign a value to a varible can be done by the "=" operator</li>
+        <li>When we are declaring a varible we use before the varible name "const" or let</li>
+        <li>"const" for t is used when the variable will not be reassigned to another value, if your try it will result in an error</li>
+        <li>is used if the variable might be reassigned later in the program.</li>
+        <li>We can declare and assign multiple varibles at the same time if we sepaete the by a comma</li>
+        <li>We can reassign a "let" varible just using again the "=" operator</li>
+    </ul>
+
+    <p>
+        Scope
+    </p>
+
+    <ul>
+        <li>Using const and let to declare variables means they are block scoped, so their value only exists inside the block they are declared in</li>
+        <li>It refers to where a constant or variable is accessible by the program. </li>
+        <ul>
+            <p>Global Scope</p>
+            <li>Any variable declared outside of a block is said to have global scope. This means it is accessible everywhere in the program.</li>
+            <li>it is not considered good practice</li>
+            <li>A ninja programmer will try to keep the
+                number of global variables to a minimum, because any variables that share the
+                same name will clash and potentially overwrite each other’s values</li>
+        </ul>
+
+        <ul>
+            <p>Local Scope</p>
+            <li>This means that any variables
+                defined inside a block using the let or const will only be available inside that
+                block and not be accessible outside of that block. This is known as having local
+                scope, as the variable is only visible in the locality of the block.</li>
+            <li>it is not considered good practice</li>
+        </ul>
+    </ul>
+
+    <p>
+        Convertirng / Parsing
+    </p>
+
+    <ul>
+        <li>We can convert numbers to strings and vice versa using a variety of methods.
+        </li>
+        <li>The best way to change a string to a number is to use the Number method. This
+            will convert the string form of a number into an actual number:</li>
+        <li>This is the preferred way to convert strings to numbers as it avoids type coercion
+            in the background. The conversion is also explicit and makes it obvious what is
+            being done.
+            </li>
+        <li>If the string cannot be converted into a number, then NaN is returned</li>
+        <li>There are a few tricks that can also be used to convert a string into a number that
+            use type coercion</li>
+        <li>If a string starts with a number, the parseInt function will use this number and
+            ignore any letters that come afterwards:
+            </li>
+        <li>Type coercion is when JavaScript tries to convert a value into another data
+            type in order to perform an operation</li>
+    </ul>
+
+    <p>
+        Template Literals
+    </p>
+
+    <ul>
+        <li>Template literals are a special types of string that were introduced in ES6.
+            Template literals use the backtick character, `
+        </li>
+        <li>This has the advantage of being able to use both types of quote mark within the
+            string</li>
+        <li>They also allow interpolation of JavaScript code. This means that a JavaScript
+            expression can be inserted inside a string and the result will be displayed, as can
+            be seen in the examples below:</li>
+    </ul>
+    <script>/* Varibles Exercices */
+
+        /* Declare and assign values to variables */
+        
+        const name1 = "Alexa";
+        let name2 = "Julio";
+        
+        /* How to reassig */
+        
+        name2 = "Andres";
+        
+        /* Multiple varible declaration and assignation */
+        
+        let position = 12, position2 = 30, position3 = 42;
+        
+        /* Trying to reassign a const variable */
+        
+        name1 = "Kayle";
+        
+        /* Converting String to number*/ 
+        
+        let numberString = "50";
+        let numberNumber = Number(numberString)
+        
+        /* Parsing */
+        
+        let binary = parseInt('1010',2);
+        
+        /* Template Literals */
+        
+        let string1 = `"Hello" my 'Friend'`;
+        </script>
+</body>
+</html>

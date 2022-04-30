@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week02</h2>
+
+    <ul>
+        <li><a href="programing-basics.html">Ch2: Programming Basics</a></li>
+        <li><a href="array-logic-loops.html">Ch3: Arrays Logic and Loops</a></li>
+        <li><a href="functions.html">Ch4: Functions</a></li>
+    </ul>
+
+    <p>Notes and excersices for Chapter 3 - Arrays, Logic and Loops:</p>
+
+    <p>
+        Array Properties and Methods
+    </p>
+
+    <ul>
+        <li>To find the length of an array, we can use the length property</li>
+        <li>The length property can be used as part of the index to find the last item in an
+            array:</li>
+        <li>The length property is mutable, meaning you can manually change it</li>
+        <li>If you make the array shorter than it already is, all the extra elements will be
+removed completely</li>
+        <li>To remove the last item from an array, we can use the pop() method</li>
+        <li>The method returns the last item of the array, but the array no longer contains
+            that item</li>
+        <li>The shift() method works in a similar way to the pop() method, but this
+            removes the first item in the array</li>
+        <li>The push() method appends a new value to the end of the array</li>
+        <li>The return value is the new length of the array</li>
+        <li>The unshift() method is similar to the push() method, but this appends a new
+            item to the beginning of the array</li>
+        <li>The concat() method can be used to merge an array with one or more arrays</li>
+        <li>The join() method can be used to turn the array into a string that comprises all
+            the items in the array, separated by commas</li>
+        <li>The slice() method creates a subarray; effectively chopping out a slice of an
+            original array, starting at one position and finishing at another</li>
+        <li>We can reverse the order of an array using the reverse() method</li>
+        <li>We can sort the order of an array using the sort() method:
+        </li>
+        <li>We can find out if an array contains a particular value using the indexOf()
+            method to find the first occurrence of a value in an array</li>
+        
+    </ul>
+    <script>
+        /* declaring an array*/
+
+        let array1 = ["capatain-America", "Iron Man", "Thor"];
+        array2 = ["bear", "lion", "bird", "horse"]
+        console.log(array1.length)
+
+        /* The extra slots will be filled with undefined */
+        array1.length = 7
+        console.log(array1)
+
+        /* Delete last item */
+        array1.pop()
+
+        /* Deleter first item*/
+        array1.shift()
+
+        /* Append a new element*/
+        array1.push()
+
+        /* Slice array */
+
+        let arrayString = array1.slice(2,4)
+
+        /*Concatenation of arrays*/
+
+        let arrayConcat = array1.concat(array2)
+        console.log(arrayConcat)
+        
+
+    </script>
+</body>
+</html>

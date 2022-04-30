@@ -28,5 +28,4 @@ for (let pairLabelLink of links){
     newAElement.textContent = pairLabelLink["label"];
 
     newLiElement.appendChild(newAElement);
-    /*console.log(pairLabelLink["url"]);*/
 };
