@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week02</h2>
+
+    <ul>
+        <li><a href="index.html">Week 03</a></li>
+        <li><a href="object-methods-this.html">Object Methods: this</a></li>
+        <li><a href="ch6-document-object-model.html">Ch6: Document Object Model</a></li>
+        <li><a href="ch7-events.html">Ch7: Events</a></li>
+    </ul>
+
+    <p>Notes and excercises for Ch5: Objects</p>
+
+    <ul>
+        <li>Everything in JavaScript is either one of the six primitive data types, or an object.</li>
+        <li>There are built-in objects that are part of JavaScript (like lists pr functions) and user-defined objects</li>
+        <li>An object in JavaScript is a self-contained set of related values and functions</li>
+        <li>They are a collection of named properties, a property's value is a function, it is known as a method.</li>
+        <li>They can also inherit properties from other objects</li>
+        <li>Objects are often used to keep any related information and functionality together in the same place.</li>
+        <li>An object literal is an object that is created directly in the language by wrapping all its properties and methods in curly braces {}.</li>
+        <li>Object literals are a distinguishing feature of the JavaScript language, as they allow objects to be created quickly without the need for defining a class. They also provide a useful way of organizing your code without polluting the global namespace.</li>
+        <li>All objects are mutable at any time when a program is running. This means that its properties and methods can be changed or removed, and new properties and methods can be added to the object, even if it was declared using const</li>
+        <li>We can access the properties of an object using the dot notation, or we can also access an object's properties using bracket notation</li>
+        <li>An object is not an ordered list like an array, set or map, so you should never rely on the properties being in a certain order.</li>
+        <li>Any property can be removed from an object using the delete operator.</li>
+        <li>It’s even possible for an object to contain other objects. These are known as nested objects</li>
+    </ul>
+    <script>
+        const Batman = {
+        name: 'Batman',
+        'real name': 'Bruce Wayne',
+        height: 62,
+        weight: 220,
+        hero: true,
+        villain: false,
+        allies: ['Superman','Cat Woman','Wonder Woman'],
+        Run() {
+        return 'Run, Run away!';
+        }
+        };
+    </script>
+    <script>
+        //This creates an empty object
+        const spiderman = {};
+
+        //This creates an empty object too
+        const spiderman1 = new Object();
+    </script>
+    <script>
+        const Batman2 = {
+        name: 'Batman',
+        'real name': 'Bruce Wayne',
+        height: 62,
+        weight: 220,
+        hero: true,
+        villain: false,
+        allies: ['Superman','Cat Woman','Wonder Woman'],
+        Run() {
+        return 'Run, Run away!';
+        }
+        };
+
+        alert(Batman2.name);
+
+        //This is the same that the line above
+        alert(Batman2["name"])
+
+        //This deletes a property from Batman2
+        delete Batman2.height
+
+        //This is a nested object
+        const jla = {
+            superman: { realName: 'Clark Kent' },
+            batman: { realName: 'Bruce Wayne' },
+            wonderWoman: { realName: 'Diana Prince' },
+            flash: { realName: 'Barry Allen' },
+            aquaman: { realName: 'Arthur Curry' },
+        };
+    </script>
+</body>
+</html>

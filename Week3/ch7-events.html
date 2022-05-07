@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week02</h2>
+
+    <ul>
+        <li><a href="index.html">Week 03</a></li>
+        <li><a href="object-methods-this.html">Object Methods: this</a></li>
+        <li><a href="ch5-objects.html">Ch5: Objects</a></li>
+        <li><a href="ch7-events.html">Ch6: Document Object Model</a></li>
+    </ul>
+
+    <p>Notes and excercises for Ch7: Events</p>
+
+    <ul>
+        <li>Events are another part of the DOM and they are what provides the link between the web page and user interactions.</li>
+        <li>Every time a user interacts with a web page, an event occurs that our program can detect and then respond to.</li>
+        <li>JavaScript, uses a non-blocking approach that uses eventlisteners to listen out for any clicks on the page</li>
+        <li>Event listeners are added to elements on the page and are part of the DOM that we met in the last chapter</li>
+    </ul>
+    <script>
+        //Add Event Listener to the body
+        document.body.addEventListener('click',doSomething);
+
+        //Mouse Event Example
+        const dblclickParagraph = document.getElementById('dblclick');
+        dblclickParagraph.addEventListener('dblclick', highlight);
+        function highlight(event){
+            event.target.classList.toggle('highlight');
+        }
+
+        //Keyboard Event Example
+        dblclickParagraph.addEventListener('keypress', (event) => console.log(`You pressed the ${event.key} character`));
+        
+        //Touch Event Example
+        dblclickParagraph.addEventListener('touchend', () => console.log('Touchstopped'));
+    </script>
+</body>
+</html>

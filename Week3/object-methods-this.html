@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week02</h2>
+
+    <ul>
+        <li><a href="index.html">Week 03</a></li>
+        <li><a href="ch5-objects.html">Ch5: Objects</a></li>
+        <li><a href="ch6-document-object-model.html">Ch6: Document Object Model</a></li>
+        <li><a href="ch7-events.html">Ch7: Events</a></li>
+    </ul>
+
+    <p>Notes and excercises for Object Methods: this</p>
+
+    <ul>
+        <li>Objects are usually created to represent entities of the real world</li>
+        <li>Actions are represented in JavaScript by functions in properties</li>
+        <li>A function that is a property of an object is called its method</li>
+        <li>we could use a pre-declared function as a method</li>
+        <li>When we write our code using objects to represent entities, that’s called object-oriented programming, in short: “OOP”.</li>
+        <li>It’s common that an object method needs to access the information stored in the object to do its job.</li>
+        <li>to access the object, a method can use the this keyword.</li>
+        <li>Technically, it’s also possible to access the object without this, by referencing it via the outer variable</li>
+        <li>But such code is unreliable. If we decide to copy user to another variable, e.g. admin = user and overwrite user with something else, then it will access the wrong object.</li>
+        <li>In JavaScript, keyword this behaves unlike most other programming languages. It can be used in any function, even if it’s not a method of an object.</li>
+        <li>In JavaScript this is “free”, its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is “before the dot”.</li>
+    </ul>
+    <script>
+
+        //This is and object that has characteristics as name, age, and university
+        let person = {
+            name: "Dilan",
+            age: 22,
+            university: "BYU Idaho"
+        };
+
+        //This is how we can do an action with the object, that is create a method
+        person.sayHello = function () {
+            alert("Hello");
+        };
+
+        //The person says hello
+        person.sayHello();
+
+    </script>
+    <script>
+        let person = {
+            name: "Dilan",
+            age: 22,
+            university: "BYU Idaho"
+        };
+
+        function sayHello () {
+            alert("Hello");
+        };
+
+        //This creates a method for person object but with code wrote in a pre-declared function called sayHello
+        user.sayHello = sayHello();
+
+        user.sayHello();
+    </script>
+    <script>
+        
+        let person = {
+            sayHello: function () {
+                alert("Hello");
+            }
+        };
+
+        //This makes than the example above, but is a shorter way
+        let user = {
+            sayHello () {
+                alert("Hello");
+            }
+        };
+    </script>
+    <script>
+        //An example of using "this" method
+        let person = {
+            name: "Dilan",
+            age: "22",
+
+            sayHello() {
+                alert(this.name);
+            }
+        };
+
+        person.sayHello();
+    </script>
+</body>
+</html>

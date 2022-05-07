@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week02</h2>
+
+    <ul>
+        <li><a href="index.html">Week 03</a></li>
+        <li><a href="object-methods-this.html">Object Methods: this</a></li>
+        <li><a href="ch5-objects.html">Ch5: Objects</a></li>
+        <li><a href="ch7-events.html">Ch7: Events</a></li>
+    </ul>
+
+    <p>Notes and excercises for Ch6: Document Object Model</p>
+
+    <ul>
+        <li>The Document Object Model (DOM) allows you to access elements of a web page and enable interaction with the page by adding and removing elements, changing the order, content and attributes of elements, and even altering how they are styled.</li>
+        <li>represents an HTML document as a network of connected nodes that form a tree-like structure.</li>
+        <li>The DOM treats everything on a web page as a node.</li>
+        <li>HTML tags, the text inside these tags, even the attributes of a tag are all nodes</li>
+        <li>The HTML tag is the root node, and every other part of the document is a child node of this.</li>
+        <li>The DOM is not actually part of JavaScript because it is language agnostic</li>
+        <li>This means it can be used in any programming language, not just JavaScript.</li>
+        <li>We can use JavaScript to access and modify different parts of a web page using a special built-in object called document.</li>
+        <li>The document.querySelector() method allows you to use CSS notation to find the first element in the document that matches that matches a CSS selector provided as an argument</li>
+        <li>The document.querySelectorAll() method also uses CSS notation but returns a node list of all the elements in the document that match the CSS query selector.</li>
+    </ul>
+    <script>
+        //This gets the body element form the html
+        const body = document.body;
+
+        //This gets and element by an ID "title"
+        const h1 = document.getElementById('title');
+
+        //This gets all the lements with a "li" tag
+        const listItems = document.getElementsByTagName('li');
+
+        //This gets all the elements with class name "hero"
+        const heroes = document.getElementsByClassName('hero');
+
+        //This gets the text inside first element in "heroes" varible 
+        const text = heroes[0].textContent
+
+        //Create an element
+        const flash = document.createElement('li');
+
+        const aquaman = heroes[1]
+        const wonderWoman = heroes[2]
+
+        //This inserts a child element in heroes before wonderWoman node
+        heroes.insertBefore(aquaman,wonderWoman);
+    </script>
+</body>
+</html>
