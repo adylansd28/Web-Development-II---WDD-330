@@ -41,11 +41,12 @@
         <li>The blur event occurs when the user moves the focus away from the form
             element.</li>
         <li>
-
-            <li>input: fields, including text, passwords, check boxes, radio buttons, and fileuploads</li>
-            <li>select: menus for drop-down lists of options</li>
-            <li>textarea: elements for longer text entry</li>
-            <li>button: elements for submitting and resetting forms<li>
+            <ul>
+                <li>input: fields, including text, passwords, check boxes, radio buttons, and fileuploads</li>
+                <li>select: menus for drop-down lists of options</li>
+                <li>textarea: elements for longer text entry</li>
+                <li>button: elements for submitting and resetting forms<li>
+            </ul>
 
         </li>
     </ul>
@@ -74,7 +75,17 @@
         input.addEventListener('blur', function(){
         if(input.value === '') {
         input.value = 'Search Here';
-} }, false);
+
+        //This only allows to enter a name without the first letter as "x"
+        form.addEventListener('submit',validate,false);
+        function validate(event) {
+        const firstLetter = form.heroName.value[0];
+        if (firstLetter.toUpperCase() === 'X') {
+        event.preventDefault();
+        alert('Your name is not allowed to start with X!');
+        }
+        }
+        } }, false);
     </script>
 </body>
 </html>

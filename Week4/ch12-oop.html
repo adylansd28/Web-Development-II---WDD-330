@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week04</h2>
+
+    <ul>
+        <li><a href="index.html">Week 04</a></li>
+        <li><a href="ch8-forms.html">Chapter 8: Forms</a></li>
+        <li><a href="ch15-modern-js.html">Chapter 15: Modern Javascript</a></li>
+    </ul>
+
+    <p>Notes and excercises for Chapter 12: Object Oriented Programming</p>
+
+    <ul>
+        <li>Object-oriented programming is a style of programming that
+            involves separating the code into objects that have properties and methods.
+        </li>
+        <li>
+            There are three main concepts in OOP: encapsulation,
+            polymorphism and inheritance.
+        </li>
+        <li>
+            Encapsulation: the inner workings
+            are kept hidden inside the object and only the essential functionalities are
+            exposed to the end user
+        </li>
+        <li>
+            Polymorphism: the same process can be used for different objects
+        </li>
+        <li>
+            taking the features of one object then adding some new features
+        </li>
+        <li>This is because they use a class to define a blueprint for an object.</li>
+        <li>class to define a blueprint for an object.</li>
+        <li>Objects are then created as an instance of that class, and inherit all the properties
+            and methods of the class
+        </li>
+        <li>We can use the constructor property to instantiate a copy of an object, without
+            having to reference the actual constructor function or class declaration directly.</li>
+        <li>Static methods are not available to instances of the class</li>
+
+    </ul>
+    <script>
+        //This creates anew object
+        const redDice = new Dice();
+
+        //This creates a new object
+        class Dice {
+        constructor(sides=6) {
+        this.sides = sides;
+        }
+        roll() {
+        return Math.floor(this.sides * Math.random() + 1)
+        }
+        }
+    </script>
+</body>
+</html>

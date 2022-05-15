@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week04</h2>
+
+    <ul>
+        <li><a href="index.html">Week 04</a></li>
+        <li><a href="ch8-forms.html">Chapter 8: Forms</a></li>
+        <li><a href="ch12-oop.html">Chapter 12: Object Oriented Programming</a></li>
+    </ul>
+
+    <p>Notes and excercises for Chapter 15: Modern Javascript</p>
+
+    <ul>
+        <li>Libraries: A JavaScript library is a piece of code that provides several methods that make it
+            easier to achieve common tasks
+        </li>
+        <li>A big advantage of utilizing a popular library is that it will be used by lots of
+            people and thoroughly tested. It will most likely have been optimized and battletested
+            for nearly every eventuality. Using a library means you can be confident
+            that your code will be as bullet-proof as possible in many browsers.</li>
+        <li>there will usually be lots of online documentation and a strong community ready
+            to help out if you become stuck</li>
+        <li>There are some disadvantages to using libraries, however. You need to include
+            the code for the library as well as your own code. This increases the amount of
+            578 JavaScript: Novice to Ninja, 2nd Edition
+            code that needs to be downloaded by a website,</li>
+        <li>Modular JavaScript: A module is a self-contained piece of code that provides functions and methods
+            that can then be used in other files and by other modules.</li>
+        <li>Model-View-Controller (MVC) is a design pattern that’s been used for a long time
+            in server-side languages.</li>
+
+    </ul>
+    <script>
+        //This creates anew object
+        const redDice = new Dice();
+
+        //This creates a new object
+        class Dice {
+        constructor(sides=6) {
+        this.sides = sides;
+        }
+        roll() {
+        return Math.floor(this.sides * Math.random() + 1)
+        }
+        }
+    </script>
+</body>
+</html>
