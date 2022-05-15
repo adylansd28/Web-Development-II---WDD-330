@@ -9,7 +9,12 @@ let links = [
 
     {
         label: "Week2 notes",
-        url: "week2/index.html"
+        url: "Week2/index.html"
+    },
+
+    {
+        label: "Week3 notes",
+        url: "Week3/index.html"
     }
 
 ];
