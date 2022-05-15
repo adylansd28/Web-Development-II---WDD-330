@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week04</h2>
+
+    <ul>
+        <li><a href="index.html">Week 04</a></li>
+        <li><a href="ch12-oop.html">Chapter 12: Object Oriented Programming</a></li>
+        <li><a href="ch15-modern-js.html">Chapter 15: Modern Javascript</a></li>
+    </ul>
+
+    <p>Notes and excercises for Chapter 8: Forms</p>
+
+    <ul>
+        <li>Chapter 8: Forms</li>
+        <li>Each form control has an initial value that can be specified in the HTML code.</li>
+        <li>This value can be changed by a user entering information or interacting with the
+            form’s interface (such as using a slider to increase or decrease a value).</li>
+        <li>The value
+            can also be changed dynamically using JavaScript.
+        </li>
+        <li>The legacy DOM had a useful property called document.forms that returns an
+            HTML collection of all the forms in the document in the order they appear in the
+        </li>
+        <li>The form.submit() method will submit the form automatically</li>
+        <li>The form.reset() method will reset all the form controls back to their initial
+            values specified in the HTML
+        </li>
+        <li>The form.action property can be used to set the action attribute of a form, so it’s
+            sent to a different URL to be processed on the server:
+        </li>
+        <li>The form.action property can be used to set the action attribute of a form, so it’s
+            sent to a different URL to be processed on the server:</li>
+        <li>The blur event occurs when the user moves the focus away from the form
+            element.</li>
+        <li>
+
+            <li>input: fields, including text, passwords, check boxes, radio buttons, and fileuploads</li>
+            <li>select: menus for drop-down lists of options</li>
+            <li>textarea: elements for longer text entry</li>
+            <li>button: elements for submitting and resetting forms<li>
+
+        </li>
+    </ul>
+    <script>
+        // Get first forms
+        const form = document.forms[0];
+
+        //This lin is the same for the above
+        form = document.getElementsByTagname('form')[0];
+
+        //This sents the actions attribute of the form, so it can be send to a different URL
+        form.action = '/an/other.url'
+
+        //this shows and alert on screen when the form is focused
+        const input = form.elements.searchInput;
+        input.addEventListener('focus', () => alert('focused'), false);
+
+        //the default text will disappear when the user clicks inside the input field
+        //(the focus event) and reappear if the user leaves the field blank and clicks away
+        //from it (the blur event).
+        input.addEventListener('focus', function(){
+        if (input.value==='Search Here') {
+        input.value = ''
+        }
+        }, false);
+        input.addEventListener('blur', function(){
+        if(input.value === '') {
+        input.value = 'Search Here';
+} }, false);
+    </script>
+</body>
+</html>
