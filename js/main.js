@@ -20,6 +20,11 @@ let links = [
     {
         label: "Week4 notes",
         url: "Week4/index.html"
+    },
+
+    {
+        label: "Week5 notes",
+        url: "Week5/index.html"
     }
 
 ];

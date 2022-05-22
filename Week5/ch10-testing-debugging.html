@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week05</h2>
+
+    <ul>
+        <li><a href="index.html">Week 05</a></li>
+    </ul>
+
+    <p>Notes and excercises for Chapter 10: Testing and Debugging</p>
+
+    <ul>
+        <h3>Errors, Exceptions, and Warnings</h3>
+        <li>A programmer will try to do everything to minimize errors occurring, and find
+            ways to identify and deal with them quickly.
+        </li>
+        <li>
+            Errors are caused when something goes wrong in a program. They are usually
+            caused by one of the following:
+            <ul>
+                <li>System error ― there’s a problem with the system or external devices with
+                    which the program is interacting.
+                </li>
+                <li>Programmer error ― the program contains incorrect syntax or faulty logic; it
+                    could even be as simple as a typo.
+                </li>
+                <li>User error ― the user has entered data incorrectly, which the program is
+                    unable to handle.
+                </li>
+            </ul>
+        </li>
+        <li>Programmer errors are our responsibility, so we must ensure
+            they are minimized as much as possible and fixed promptly
+        </li>
+        <li>
+            We also should try to limit user errors by predicting any possible interactions that may throw an
+            error
+        </li>
+        <li>It might even be argued that user errors are in fact also
+            programmer errors, because the program should be designed in a way that
+            prevents the user from making the error.
+        </li>
+
+        <h3>Exceptions</h3>
+        <li>An exception is an error that produces a return value that can then be used by the
+            program to deal with the error</li>
+
+        <h3>Stack Traces</h3>
+        <li>is a sequence of functions or
+            method calls that lead to the point where the error occurred</li>
+        <li>stack trace will work
+            backwards from the point at which the error occurred to identify the original
+            function or method that started the sequence.
+        </li>
+
+        <h3>Warnings</h3>
+        <li>A warning can occur if there’s an error in the code that isn’t enough to cause the
+            program to crash.
+        </li>
+        <li>his means the program will continue to run after a warning.</li>
+        <li>warning may cause the program to continue running incorrectly.</li>
+        <li>Note that not all browsers will display a warning for the code in the example
+            above
+        </li>
+        <li>Warnings and exceptions are presented differently in various environments.</li>
+        <li>When a runtime error occurs in the browser, the HTML will still appear, but the
+            JavaScript code will stop working in the background, which isn’t always obvious
+            at first.
+        </li>
+        <li>If a warning occurs, the JavaScript will continue to run (although possibly
+            incorrectly).
+        </li>
+        <h3>The Importance of Testing and Debugging</h3>
+        <li>JavaScript is a fairly forgiving language when it comes to errors</li>
+        <li>error might
+            give unexpected or incorrect results that nobody spots, or lurk in the background
+            for a long time before causing the program to crash spectacularly
+        </li>
+        <li>Failing silently
+            makes errors difficult to spot and longer to track down.
+        </li>
+        <li>programmer should ensure that the code they write fails
+            loudly in development so any errors can be identified and fixed quickly
+        </li>
+        <li>This is achieved by making sure
+            exceptions are caught and dealt with, and code is tested rigorously.
+        </li>
+
+        <h3>Strict Mode</h3>
+        <li>produces more exceptions and
+            warnings and prohibits the use of some deprecated features
+        </li>
+        <li>This is due to the
+            fact that strict mode considers coding practices that were previously accepted as
+            just being “poor style” as actual errors.
+        </li>
+        <li>Increasing the chance of errors might seem like a bad idea at first, but it’s much
+            better to spot errors early on, rather than have them cause problems later.
+        </li>
+        <li>You can even use strict mode on a per-function basis by adding the line inside a
+            function. Strict mode will then only be applied to anything inside that function
+        </li>
+        <li>In fact, the recommended way to invoke strict mode is to place all your code into
+            a self-invoking function
+        </li>
+        <li>Placing 'use strict' at the beginning of a file will enforce strict mode on all the
+            JavaScript in the file. If you’re using anybody else’s code, there’s no
+            guarantee they’ve coded in strict mode. This technique will ensure that only your
+            code is forced to use strict mode.</li>
+        <li>Modules are selfcontained pieces of code that are in strict mode by default, so the 'use strict'
+            declaration is not required.
+        </li>
+
+        <h3>Linting Tools</h3>
+        <li>Linting tools such as JS Lint, JS Hint, and ES Lint can be used to test the
+            quality of JavaScript code, beyond simply using strict mode.</li>
+        <li>They are designed to
+            highlight any sloppy programming practices or syntax errors, and will complain
+            if certain style conventions are not followed</li>
+        <li>Linting tools
+            are also useful for enforcing a programming style guide.</li>
+        <li>Passing a lint test is no guarantee that your code is correct, but it will mean it will
+            be more consistent and less likely to have problems.</li>
+
+        <h3>Feature Detection</h3>
+        <li>You can’t always rely on users having the most up-to-date
+            browser</li>
+        <li>The recommended way to determine browser support for a feature is to use
+            feature detection</li>
+        <li>Feature detection guarantees that the method is only
+            called if it actually exists and fails gracefully, without any exceptions being
+            thrown, if the method doesn’t exist.</li>
+        <li>The “old-school” way of checking for browser support was known as browser
+            sniffing. This involves using the string returned by window.navigator.userAgent</li>
+        <li>The
+            relevant methods can then be used for that browser. This approach is not
+            recommended</li>
+
+        <h3>Error Objects</h3>
+        <li>An error object can be created by the host environment when an exception
+            occurs
+        </li>
+        <li>These error objects can also be used as constructors to create custom error objects</li>
+        <li>It’s also possible to throw your own exceptions using the
+            throw statement</li>
+        <li>const error = new TypeError('You need to use numbers in this function');  </li>
+
+        <h3>Exception Handling</h3>
+        <li>When an exception occurs, the program terminates with an error message. This is
+            ideal in development as it allows us to identify and fix errors.</li>
+        <li>In production,
+            however, it will appear as if the program has crashed, which does not reflect well
+            on a programmer.</li>
+    </ul>
+    <script>
+        //If I call the function below, without been defined first, it will raise an exception "ReferenceError: unicorn is not defined"
+        unicorn();
+
+        //If I put what is below A stack trace will work backwards from the point at which the error occurred to identify the original function or method that started the sequence:
+        // << index.html:13 Uncaught ReferenceError: unicorn is
+        // ➥ not defined
+        // at three (index.html:13)
+        // at two (index.html:17)
+        // at one (index.html:21)
+        // at index.html:24`
+        function three(){ unicorn(); }
+        function two(){ three(); }
+        function one(){ two(); }
+        one();
+
+        //Code below will raise a waring "JavaScript Warning: assignment to undeclared variable"
+        pi = 3.142;
+
+        //This line adds strict mode:
+        // This will be picked up by any JavaScript engine that uses strict mode. If the
+        // engine does not support strict mode, this string will simply be ignored.
+        'use strict';
+
+        //Strict mode is used only inside the function strictly
+        function strictly(){
+        'use strict';
+        }
+
+        //This is the better way to code in strict mode
+        (function() {
+        'use strict';
+        // All your code would go inside this function
+        }());
+
+        //This is how to handle an error
+        function imaginarySquareRoot(number) {
+        'use strict';
+        let answer;
+        try {
+        answer = String(squareRoot(number));
+        } catch(error) {
+        answer = squareRoot(-number)+"i";
+        } finally {
+        return `+ or - ${answer}`;
+        }
+        }
+    </script>
+</body>
+</html>
