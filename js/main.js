@@ -27,11 +27,6 @@ let links = [
         url: "Week5/index.html"
     },
 
-    {
-        label: "Week6 - ToDo Challenge",
-        url: "Week 06/index.html"
-    },
-
 ];
 
 for (let pairLabelLink of links){
