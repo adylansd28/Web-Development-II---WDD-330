@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week07</h2>
+
+    <ul>
+        <li><a href="index.html">Week 07</a></li>
+        <li><a href="ch13-ajax.html">Chapter 13: AJAX</a></li>
+    </ul>
+
+    <p>Notes and excercises for Chapter 11: Further Functions</p>
+
+    <ul>
+        <li>functions are first-class objects, which means
+            they can be passed around in the same way as every other value.
+        </li>
+        <li>They can have
+            their own properties and methods, as well as accepting other functions as
+            parameters and being returned by other functions
+        </li>
+        <li>all functions have a length property that
+            returns the number of parameters the function has.</li>
+        <li>There is nothing to stop you adding your own properties to functions in the same
+            way that you can add properties to any object in JavaScript.</li>
+        <li>An Immediately Invoked Function Expression is
+            an anonymous function that, as the name suggests, is invoked as soon as it’s
+            defined, This is easily achieved by placing parentheses at the end of the function
+            definition</li>
+        <li>There is no way to remove a variable from a scope once it’s been declared. If a
+            variable is only required temporarily, it may cause confusion if it’s still available
+            later in the code.</li>
+        <li>An IIFE can be used to set up any initialization code that there’ll be no need for
+            again.</li>
+        <li>The dynamic nature of JavaScript means that a function is able to not only call
+            itself, but define itself, and even redefine itself. This is done by assigning an
+            anonymous function to a variable that has the same name as the function.</li>
+        <li>If any properties have previously been set on the function, these will be lost when
+            the function redefines itself.</li>
+        <li>A recursive function is one that invokes itself until a certain condition is met.</li>
+        <li>Async functions were added to the, allow you to write asynchronous code as if it
+            was synchronous.</li>
+    </ul>
+    <script>
+        function square(x) {
+            return x*x;
+        }
+
+        //this returns 1
+        console.log(square.length)
+
+        //Example of an IIFE
+        (function(){
+            const temp = 'World';
+            console.log(`Hello ${temp}`);
+        })();
+
+        //A function beeing redifined by itself
+        function party(){
+            console.log('Wow this is amazing!');
+            party = function(){
+                console.log('Been there, got the T-Shirt');
+            }
+        }
+    </script>
+</body>
+</html>

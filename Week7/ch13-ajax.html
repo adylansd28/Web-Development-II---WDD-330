@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week07</h2>
+
+    <ul>
+        <li><a href="index.html">Week 07</a></li>
+        <li><a href="ch13-ajax.html">Chapter 13: AJAX</a></li>
+    </ul>
+
+    <p>Notes and excercises for Chapter 11: Further Functions</p>
+
+    <ul>
+        <li>Ajax is a technique that allows web pages to communicate asynchronously with a
+            server, and it dynamically updates web pages without reloading.</li>
+        <li>The Fetch API provides a global fetch() method that only has one mandatory
+            argument, which is the URL of the resource you wish to fetch.</li>
+        <li>JSON is probably the most common format for AJAX responses. The json()
+            method is used to deal with these by transforming a stream of JSON data into a
+            promise that resolves to a JavaScript object.</li>
+        <li>We can also use Ajax to send information. This can be a variety of formats, but is
+            usually a JSON string.</li>
+        <li>The Fetch API includes the FormData interface, which makes it much easier to
+            submit information in forms using Ajax.</li>
+    </ul>
+    <script>
+
+        //How to use Ajax Fetch, promises
+        const url = 'http://spbooks.github.io/questions.json';
+        fetch(url)
+        .then(res => res.json())
+        .then(quiz => {
+            view.start.addEventListener('click', () => game.start(quiz.questions), false);
+            view.response.addEventListener('click', (event) => game.check(event), false);
+        });
+    </script>
+</body>
+</html>

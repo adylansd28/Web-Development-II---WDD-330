@@ -1,8 +1,24 @@
 const taskList = document.querySelector(".task-list");
 const addNewTaskBtn = document.querySelector(".new-task-btn");
 const taskLeftDiv = document.querySelector(".task-left-div");
+const taskLeftSpan = document.querySelector(".task-left-span");
+
+let allBtn = document.querySelector(".btn-all");
+let activeBtn = document.querySelector(".btn-act");
+let completedBtn = document.querySelector(".btn-com");
+
+let allActiveCompleted = "all";
+let allCounterTask = 0;
+let markDoneCounter = 0;
+let activeCounter = 0;
 
 let numTotalTask = 1;
+
+function initializeBtns() {
+    allBtn.setAttribute("onclick", "selectCounter(this)");
+    activeBtn.setAttribute("onclick", "selectCounter(this)");
+    completedBtn.setAttribute("onclick", "selectCounter(this)");
+};
 
 function addNewTaskFunc (){
     let addNewTaskName = document.querySelector(".new-task-name").value;
@@ -11,10 +27,12 @@ function addNewTaskFunc (){
 
     let newMarkDoneBtn = document.createElement("input");
     newMarkDoneBtn.setAttribute("type","button");
-    newMarkDoneBtn.setAttribute("value","*");
+    newMarkDoneBtn.setAttribute("value"," ");
+    newMarkDoneBtn.setAttribute("onclick","markDone(this)");
     newLiElement.appendChild(newMarkDoneBtn);
 
     let newPElement = document.createElement("p");
+    newPElement.setAttribute("class","undone-task");
     newPElement.textContent = addNewTaskName;
     newLiElement.appendChild(newPElement);
 
@@ -28,12 +46,69 @@ function addNewTaskFunc (){
     numTotalTask = numTotalTask + 1;
     taskList.insertBefore(newLiElement, taskLeftDiv);
 
+    allCounterTask ++;
+    countAllActiveCompleted()
+
 };
 
 function delTask (element) {
     let firstParent = element.parentNode
     let secondParent = firstParent.parentNode
     secondParent.removeChild(firstParent);
+
+    allCounterTask --;
+    markDoneCounter --;
+    activeCounter --;
+    countAllActiveCompleted()
 };
 
+function markDone(element) {
+    if (element.getAttribute("value") == " ") {
+        element.removeAttribute("class")
+        element.setAttribute("class", "mark-done");
+        element.setAttribute("value", "*");
+        let centerDiv = element.parentNode.querySelector(":nth-child(2)");
+        centerDiv.removeAttribute("class");
+        centerDiv.setAttribute("class", "mark-done-task-");
+        markDoneCounter ++;
+    } else if (element.getAttribute("value") == "*") {
+        element.removeAttribute("class")
+        element.setAttribute("class", "undone");
+        element.setAttribute("value", " ");
+        let centerDiv = element.parentNode.querySelector(":nth-child(2)");
+        centerDiv.removeAttribute("class");
+        centerDiv.setAttribute("class", "undone-task-");
+        markDoneCounter --;
+    };
+
+    countAllActiveCompleted()
+    
+};
+
+function countAllActiveCompleted() {
+
+    if (allActiveCompleted == "all") {
+        taskLeftSpan.textContent = allCounterTask.toString() + " ";
+    } else if (allActiveCompleted == "active") {
+        activeCounter = allCounterTask - markDoneCounter;
+        taskLeftSpan.textContent = activeCounter.toString() + " ";
+    } else if (allActiveCompleted == "completed") {
+        taskLeftSpan.textContent = markDoneCounter.toString() + " ";
+    }
+};
+
+function selectCounter(button) {
+    if (button.className == "btn-all") {
+        allActiveCompleted = "all";
+    } else if (button.className == "btn-act") {
+        allActiveCompleted = "active";
+    } else if (button.className == "btn-com") {
+        allActiveCompleted = "completed";
+    };
+    
+    countAllActiveCompleted();
+};
+
+initializeBtns();
+countAllActiveCompleted();
 addNewTaskBtn.addEventListener("click", addNewTaskFunc);
