@@ -32,6 +32,11 @@ let links = [
         url: "Week 06/index.html"
     },
 
+    {
+        label: "Weekt - notes",
+        url: "Week7/index.html"
+    },
+
 ];
 
 for (let pairLabelLink of links){
