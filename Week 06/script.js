@@ -55,10 +55,18 @@ function delTask (element) {
     let firstParent = element.parentNode
     let secondParent = firstParent.parentNode
     secondParent.removeChild(firstParent);
-
-    allCounterTask --;
+    
     markDoneCounter --;
     activeCounter --;
+
+    if (element.getAttribute("value") == " ") {
+        activeCounter --;
+    } else if (element.getAttribute("value") == "*") {
+        markDoneCounter --;
+    };
+
+    allCounterTask --;
+
     countAllActiveCompleted()
 };
 
