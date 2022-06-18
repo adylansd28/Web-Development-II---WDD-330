@@ -23,7 +23,8 @@ function initializeBtns() {
 function addNewTaskFunc (){
     let addNewTaskName = document.querySelector(".new-task-name").value;
     let newLiElement = document.createElement("li");
-    newLiElement.setAttribute("class","task-" + numTotalTask);
+    newLiElement.setAttribute("id","task-" + numTotalTask);
+    newLiElement.setAttribute("class","task");
 
     let newMarkDoneBtn = document.createElement("input");
     newMarkDoneBtn.setAttribute("type","button");
@@ -32,7 +33,7 @@ function addNewTaskFunc (){
     newLiElement.appendChild(newMarkDoneBtn);
 
     let newPElement = document.createElement("p");
-    newPElement.setAttribute("class","undone-task");
+    newPElement.setAttribute("id","undone-task-" + numTotalTask);
     newPElement.textContent = addNewTaskName;
     newLiElement.appendChild(newPElement);
 

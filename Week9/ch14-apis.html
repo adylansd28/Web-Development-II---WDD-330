@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week09</h2>
+
+    <ul>
+        <li><a href="index.html">Week 09</a></li>
+        <li><a href="ch9-window-object.html">Ch9: The Window Object</a></li>
+    </ul>
+
+    <p>Ch14: HTML5 APIs</p>
+
+    <ul>
+        <li>The data- attribute is a way of embedding data in a web page using custom
+            attributes that are ignored by the browser.
+        </li>
+        <li>The HTML5 specification contains a number of APIs that help to gain access to
+            hardware, such as cameras, batteries, geolocation, and the graphics card.</li>
+        <li>The Web Storage API provides a key-value store on the client’s computer that is
+            similar to using cookies but has fewer restrictions, more storage capacity, and is
+            generally easier to use.</li>
+        <li>If a browser supports the Web Storage API, the window object will have a property
+            called localStorage,</li>
+        <li>Every time a value is saved to local storage, a storage event is fired   
+        </li>
+        <li>The Geolocation API is used to obtain the geographical position of the device.</li>
+        <li>This means it can be used to find the user’s exact location, then link to nearby
+            places or measure the speed at which the user is moving.</li>
+        <li>Websocket is a new protocol that allows two-way communication with a server –
+            also known as push messaging</li>
+        <li>The Notification API allows you to show messages using the system’s
+            notifications.</li>
+    </ul>
+    <script>
+        //Storing information
+        localStorage.setItem('name', 'Walter White');
+
+        addEventListener('storage', (event) => {
+            console.log(`The ${event.key} was updated from
+            ➥ ${event.oldValue} to ${event.newValue} and saved in
+            ${event.storageArea}`) }, false);
+
+            navigator.geolocation.getCurrentPosition(youAreHere);
+    </script>
+</body>
+</html>
