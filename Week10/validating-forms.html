@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week10</h2>
+
+    <ul>
+        <li><a href="index.html">Week 10</a></li>
+        <li><a href="using-fetch.html">MDN: Using Fetch</a></li>
+    </ul>
+
+    <p>MDN: Validating Forms</p>
+
+    <ul>
+        <li>Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format</li>
+        <li>Client-side validation is an initial check and an important feature of good user experience;</li>
+        <li>However, client-side validation should not be considered an exhaustive security measure!</li>
+        <li>What is form validation? you will notice that they provide feedback when you don't enter your data in the format they are expecting.</li>
+        <li>This is called form validation. When you enter data, the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application</li>
+        <li>If the information is correctly formatted, the application allows the data to be submitted to the server and (usually) saved in a database</li>
+        <li> if the information isn't correctly formatted, it gives the user an error message explaining what needs to be corrected, and lets them try again.</li>
+        <li>We want to get the right data, in the right format. Our applications won't work properly if our users' data is stored in the wrong format, is incorrect, or is omitted altogether.</li>
+        <li>We want to protect our users' data. Forcing our users to enter secure passwords makes it easier to protect their account information.</li>
+        <li>We want to protect ourselves. There are many ways that malicious users can misuse unprotected forms to damage the application</li>
+        <ul>There are two different types of client-side validation that you'll encounter on the web:
+            <li>Built-in form validation uses HTML5 form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.</li>
+            <li>One of the most significant features of HTML5 form controls is the ability to validate most user data without relying on JavaScript. This is done by using validation attributes on form elements.</li>
+            <ul>
+                <li>required: Specifies whether a form field needs to be filled in before the form can be submitted.</li>
+                <li>minlength and maxlength: Specifies the minimum and maximum length of textual data (strings)</li>
+                <li>min and max: Specifies the minimum and maximum values of numerical input types</li>
+                <li>type: Specifies whether the data needs to be a number, an email address, or some other specific preset type.</li>
+                <li>pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.</li>
+            </ul>
+
+            <li>Validating forms using JavaScript
+                You must use JavaScript if you want to take control over the look and feel of native error messages or to deal with legacy browsers that do not support HTML's built-in form validation. In this section we will look at the different ways to do this.</li>
+        </ul>
+    
+    </ul>
+
+    <p>Example of built-in form validation</p>
+
+    <form>
+        <label for="choose">Would you prefer a banana or cherry? (required)</label>
+        <input id="choose" name="i_like" required>
+        <button>Submit</button>
+    </form>
+
+    <p>Example of built-in form validation with regular expressions (regex)</p>
+
+    <form>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+        <button>Submit</button>
+    </form>
+    <script>
+    </script>
+</body>
+</html>

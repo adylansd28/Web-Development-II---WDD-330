@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 | Portfolio - Dilan Salas</title>
+</head>
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week10</h2>
+
+    <ul>
+        <li><a href="index.html">Week 10</a></li>
+        <li><a href="validating-forms.html">MDN: Validating Forms</a></li>
+    </ul>
+
+    <p>MDN: Using Fetch</p>
+
+    <ul>
+        <li>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.</li>
+        <li>Files can be uploaded using an HTML input element type-file, FormData() and fetch().</li>
+    </ul>
+    <script>
+        //Basic feth request
+        fetch('http://example.com/movies.json')
+        .then(response => response.json())
+        .then(data => console.log(data));
+
+        //Credentials include
+        fetch('https://example.com', {
+        credentials: 'include'
+        });
+
+        // The calling script is on the origin 'https://example.com'
+
+        fetch('https://example.com', {
+        credentials: 'same-origin'
+        });
+
+        //ensure browsers don't include credentials in the request
+        fetch('https://example.com', {
+        credentials: 'omit'
+        });
+
+        //Uploading JSON Data
+        const data = { username: 'example' };
+
+        fetch('https://example.com/profile', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+        console.log('Success:', data);
+        })
+        .catch((error) => {
+        console.error('Error:', error);
+        });
+    </script>
+</body>
+</html>
