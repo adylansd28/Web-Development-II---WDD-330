@@ -8,42 +8,48 @@
     <title>WDD 330 | Portfolio - Dilan Salas</title>
 </head>
 <body>
+    
     <header>
         <h1>Scripture Analyzer</h1>
 
         <nav>
-            <input type="text" placeholder="Insert a word or an expression to analyze">
-            <button type="button">Anlyze</button>
+            <input id="analyze-input" type="text" placeholder="Insert a word or an expression to analyze">
+            <button type="button" id="analyze-button">Analyze</button>
         </nav>
     </header>
 
     <main>
-        <h2>Analysis results for "<span></span>"</h2>
+        <h2 class="main-h2">"<span id="analysis-span"></span>" appears in:</h2>
 
-        <div class="div-grid">
+        <div class="main-grid">
             <div class="bom-grid">
                 <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng"><h3>Book of Mormon</h3></a>
-                <span>0</span>
+                <span id="bom-span">0</span>
                 <p>times</p>
             </div>
             <div class="dc-grid">
                 <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament?lang=eng"><h3>Doctrine and Covenants</h3></a>
-                <span>0</span>
+                <span id="dac-span">0</span>
                 <p>times</p>
             </div>
             <div class="ot-grid">
                 <a href="https://www.churchofjesuschrist.org/study/scriptures/ot?lang=eng"><h3>Old Testament</h3></a>
-                <span>0</span>
+                <span id="ot-span">0</span>
                 <p>times</p>
             </div>
             <div class="nt-grid">
                 <a href="https://www.churchofjesuschrist.org/study/scriptures/nt?lang=eng"><h3>New Testament</h3></a>
-                <span>0</span>
+                <span id="nt-span">0</span>
                 <p>times</p>
             </div>
             <div class="pop-grid">
                 <a href="https://www.churchofjesuschrist.org/study/scriptures/pgp?lang=eng"><h3>Pearl of Great Price</h3></a>
-                <span>0</span>
+                <span id="pgp-span">0</span>
+                <p>times</p>
+            </div>
+            <div class="total-grid">
+                <a href="#"><h3>Total</h3></a>
+                <span id="total-span">0</span>
                 <p>times</p>
             </div>
         </div>
