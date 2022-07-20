@@ -53,7 +53,7 @@ let links = [
     },
 
     {
-        label: "Week14 - notes",
+        label: "Week14 - Final Project -Scripture Analyzer",
         url: "Week 14/index.html"
     },
 
