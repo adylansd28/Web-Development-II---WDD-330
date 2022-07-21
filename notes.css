@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=PT+Sans&family=Raleway:wght@100&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+h1, h2 {
+   font-family: 'Merriweather'; 
+   text-align: center;
+}
+
+p {
+    margin-left: 10%;
+}
+
+nav {margin-left: 30%;}
+
+ul {
+    list-style: none;
+    margin-left: 15%;
+}
+
+li {
+    margin-top: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}

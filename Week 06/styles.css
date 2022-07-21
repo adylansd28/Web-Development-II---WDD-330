@@ -1,29 +1,33 @@
+body {
+    padding-top: 0;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0, 68, 255, 0.719);
+}
+
 h1 {
+    margin-top: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body {
-    align-items: center;
-    align-content: center; 
-}
-
 ul {
-    margin: 0 auto;
-    max-width: 100%;
     text-align: center;
-    align-items: center;
-
+    padding-left: 38.5%;
 }
 
 li {
     list-style: none;
     border-radius: 5px;
-    max-width: 15%;
-    margin-left: 40%;
-    border: 5px outset skyblue;
+    border: 5px outset gray;
     padding: 1%;
     text-align: center;
+    width: 30%;
 }
 
 form {
@@ -37,10 +41,8 @@ form {
     text-align: center;
 }
 
-.task p {
+p {
     text-align: center;
-    display: inline;
-    width: 400px;
 }
 
 .task {
@@ -51,7 +53,32 @@ form {
 .mark-done {
     text-align: left;
 }
-/*
-p, div, form {
-    display: inline;
+
+/*DIVISION*/
+
+input {
+    text-align: center;
+    font-family: 'Rubik';
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+::placeholder {
+    color: rgba(48, 50, 53, 0.589);
+}
+
+button, .new-task-btn {
+    font-family: 'Rubik';
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: white;
+    background-color: gray;
+}
+
+button:hover, .new-task-btn:hover {
+    border: 1px solid gray;
+    color: gray;
+    background-color: white;
 }

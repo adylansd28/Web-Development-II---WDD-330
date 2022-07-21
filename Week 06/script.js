@@ -75,12 +75,12 @@ function markDone(element) {
     if (element.getAttribute("value") == " ") {
         element.removeAttribute("class")
         element.setAttribute("class", "mark-done");
-        element.setAttribute("value", "*");
+        element.setAttribute("value", "✓");
         let centerDiv = element.parentNode.querySelector(":nth-child(2)");
         centerDiv.removeAttribute("class");
         centerDiv.setAttribute("class", "mark-done-task-");
         markDoneCounter ++;
-    } else if (element.getAttribute("value") == "*") {
+    } else if (element.getAttribute("value") == "✓") {
         element.removeAttribute("class")
         element.setAttribute("class", "undone");
         element.setAttribute("value", " ");

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=PT+Sans&family=Raleway:wght@100&family=Rubik:wght@300&family=Ubuntu&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    width: 60%;
+    height: 100vh;
+    margin-left: 20%;
+    background-color: white;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Ubuntu';
+    margin: 0;
+}
+
+h1 {
+    padding-top: 1%;
+}
+
+h2 {
+    margin-top: 1%;
+}
+
+ol {
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+p {
+    text-align: center;
+    font-family: 'Rubik';
+}
+
+ul {
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    margin-top: 3.5%;
+    font-family: 'Rubik';
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
